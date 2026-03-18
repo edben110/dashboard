@@ -1,3 +1,5 @@
+import { Bell, ChevronDown, Search } from "lucide-react";
+
 export function TopBar() {
   return (
     <header className="topbar card-base">
@@ -15,9 +17,18 @@ export function TopBar() {
       </nav>
 
       <div className="top-actions">
-        <button className="icon-btn">S</button>
-        <button className="icon-btn">N</button>
-        <button className="avatar">SJ</button>
+        <button className="icon-btn" aria-label="Search">
+          <Search size={16} strokeWidth={2.2} />
+        </button>
+        <button className="icon-btn" aria-label="Notifications">
+          <Bell size={16} strokeWidth={2.2} />
+        </button>
+        <button className="avatar" aria-label="Profile">
+          SJ
+        </button>
+        <button className="icon-btn" aria-label="Open profile menu">
+          <ChevronDown size={14} strokeWidth={2.2} />
+        </button>
       </div>
     </header>
   );

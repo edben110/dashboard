@@ -1,6 +1,11 @@
+import { CreditCard, ExternalLink, HandCoins } from "lucide-react";
+import { FaAmazon, FaDribbble, FaGoogle } from "react-icons/fa";
+
 const payments = [
   {
     name: "Dribbble Design",
+    icon: FaDribbble,
+    iconClassName: "pay-icon dribbble",
     date: "16 Jun 2025",
     time: "10:30 PM",
     status: "Successful",
@@ -8,6 +13,8 @@ const payments = [
   },
   {
     name: "Google Pay",
+    icon: FaGoogle,
+    iconClassName: "pay-icon google",
     date: "15 Jun 2025",
     time: "11:45 PM",
     status: "Successful",
@@ -15,6 +22,8 @@ const payments = [
   },
   {
     name: "Amazon Shopping",
+    icon: FaAmazon,
+    iconClassName: "pay-icon amazon",
     date: "14 Jun 2025",
     time: "10:15 PM",
     status: "Successful",
@@ -27,11 +36,18 @@ export function BottomGrid() {
     <section className="grid-bottom">
       <article className="card-base history-card">
         <div className="card-head">
-          <div>
-            <h3>Payment History</h3>
-            <p>Recent payments history</p>
+          <div className="card-title with-icon">
+            <span className="title-icon">
+              <CreditCard size={15} strokeWidth={2.2} />
+            </span>
+            <div>
+              <h3>Payment History</h3>
+              <p>Recent payments history</p>
+            </div>
           </div>
-          <button className="mini-btn">NE</button>
+          <button className="mini-btn" aria-label="Open details">
+            <ExternalLink size={12} strokeWidth={2.2} />
+          </button>
         </div>
 
         <div className="table-wrap">
@@ -48,7 +64,14 @@ export function BottomGrid() {
             <tbody>
               {payments.map((payment) => (
                 <tr key={payment.name}>
-                  <td>{payment.name}</td>
+                  <td>
+                    <span className="payment-name">
+                      <span className={payment.iconClassName}>
+                        <payment.icon size={13} />
+                      </span>
+                      {payment.name}
+                    </span>
+                  </td>
                   <td>{payment.date}</td>
                   <td>{payment.time}</td>
                   <td>
@@ -66,11 +89,18 @@ export function BottomGrid() {
       <div className="right-stack">
         <article className="card-base amount-card">
           <div className="card-head">
-            <div>
-              <h3>Amount of credit</h3>
-              <p>Total refund amount with fee</p>
+            <div className="card-title with-icon">
+              <span className="title-icon">
+                <HandCoins size={15} strokeWidth={2.2} />
+              </span>
+              <div>
+                <h3>Amount of credit</h3>
+                <p>Total refund amount with fee</p>
+              </div>
             </div>
-            <button className="mini-btn">NE</button>
+            <button className="mini-btn" aria-label="Open details">
+              <ExternalLink size={12} strokeWidth={2.2} />
+            </button>
           </div>
           <div className="amount-line">
             <strong>$8,945.89</strong>
@@ -84,7 +114,9 @@ export function BottomGrid() {
               <h3>Mandatory Payments</h3>
               <p>Recent payments</p>
             </div>
-            <button className="mini-btn">NE</button>
+            <button className="mini-btn" aria-label="Open details">
+              <ExternalLink size={12} strokeWidth={2.2} />
+            </button>
           </div>
 
           <div className="people-row">
