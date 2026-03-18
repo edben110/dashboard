@@ -18,16 +18,16 @@ export function TopBar() {
 
       <div className="top-actions">
         <button className="icon-btn" aria-label="Search">
-          <Search size={16} strokeWidth={2.2} />
+          <Search size={18} strokeWidth={2.2} />
         </button>
         <button className="icon-btn" aria-label="Notifications">
-          <Bell size={16} strokeWidth={2.2} />
+          <Bell size={18} strokeWidth={2.2} />
         </button>
         <button className="avatar" aria-label="Profile">
           SJ
         </button>
         <button className="icon-btn" aria-label="Open profile menu">
-          <ChevronDown size={14} strokeWidth={2.2} />
+          <ChevronDown size={16} strokeWidth={2.2} />
         </button>
       </div>
     </header>

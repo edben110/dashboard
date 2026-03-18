@@ -30,6 +30,16 @@ body {
 
 button {
   font: inherit;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
 }
 
 .page-bg {
@@ -111,6 +121,11 @@ button {
   box-shadow: 0 6px 14px rgba(20, 22, 23, 0.08);
 }
 
+.top-nav button:hover {
+  background: #ffffff;
+  color: #1f2326;
+}
+
 .top-actions {
   display: flex;
   align-items: center;
@@ -129,8 +144,8 @@ button {
 }
 
 .icon-btn {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   padding: 0;
   line-height: 0;
   display: grid;
@@ -141,6 +156,15 @@ button {
   width: 18px;
   height: 18px;
   display: block;
+}
+
+.icon-btn:hover,
+.avatar:hover,
+.mini-btn:hover,
+.date-pill:hover,
+.wallet-btn:hover {
+  border-color: #d8dde0;
+  background: #f3f6f7;
 }
 
 .avatar {
@@ -177,8 +201,8 @@ button {
 }
 
 .rail-btn {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   padding: 0;
   line-height: 0;
   display: grid;
@@ -194,6 +218,17 @@ button {
 .rail-btn.active {
   border-color: transparent;
   background: var(--brand);
+  color: #ffffff;
+}
+
+.rail-btn:hover {
+  border-color: #d8dde0;
+  background: #edf2f3;
+}
+
+.rail-btn.active:hover {
+  border-color: transparent;
+  background: #25734d;
   color: #ffffff;
 }
 
@@ -292,8 +327,8 @@ button {
 }
 
 .title-icon {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 999px;
   border: 1px solid var(--stroke);
   color: #70787b;
@@ -316,8 +351,8 @@ button {
 }
 
 .mini-btn {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   padding: 0;
   line-height: 0;
   display: grid;
@@ -385,14 +420,23 @@ button {
   line-height: 1.1;
 }
 
-.mini-revenue span,
-.amount-line span {
+.percentage-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
   padding: 4px 9px;
-  color: #1f7d52;
-  background: var(--brand-soft);
+  color: #ffffff;
+  background: var(--brand);
   font-size: 0.72rem;
   font-weight: 700;
+}
+
+.percentage-badge:hover,
+.percentage-badge:focus-visible,
+.percentage-badge:active {
+  color: #ffffff;
+  background: var(--brand);
 }
 
 .chip-row {
@@ -413,6 +457,17 @@ button {
 
 .chip-row button.active {
   background: var(--brand);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.chip-row button:hover {
+  background: #e9ecee;
+  color: #4e5759;
+}
+
+.chip-row button.active:hover {
+  background: #25734d;
   color: #ffffff;
   border-color: transparent;
 }
@@ -466,6 +521,17 @@ button {
 
 .cta-row .send {
   background: var(--brand);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.cta-row button:hover {
+  background: #eaedee;
+  color: #596164;
+}
+
+.cta-row .send:hover {
+  background: #25734d;
   color: #ffffff;
   border-color: transparent;
 }
@@ -524,8 +590,8 @@ tbody tr td:last-child {
 }
 
 .pay-icon {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border-radius: 999px;
   display: grid;
   place-items: center;

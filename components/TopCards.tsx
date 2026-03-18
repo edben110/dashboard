@@ -4,7 +4,6 @@ import {
   ArrowUp,
   ExternalLink,
   SquareChartGantt,
-  WalletCards,
 } from "lucide-react";
 
 export function TopCards() {
@@ -19,7 +18,7 @@ export function TopCards() {
             </div>
           </div>
           <button className="mini-btn" aria-label="Open details">
-            <ExternalLink size={12} strokeWidth={2.2} />
+            <ExternalLink size={14} strokeWidth={2.2} />
           </button>
         </div>
 
@@ -38,7 +37,7 @@ export function TopCards() {
             <p>Weekly Revenue</p>
             <strong>+3,945 USD</strong>
           </div>
-          <span>+12.8%</span>
+          <span className="percentage-badge">+12.8%</span>
         </div>
       </article>
 
@@ -46,7 +45,7 @@ export function TopCards() {
         <div className="card-head">
           <div className="card-title with-icon">
             <span className="title-icon">
-              <SquareChartGantt size={15} strokeWidth={2.2} />
+              <SquareChartGantt size={17} strokeWidth={2.2} />
             </span>
             <div>
               <h3>Engagement Rate</h3>
@@ -56,7 +55,7 @@ export function TopCards() {
             <button>Monthly</button>
             <button className="active">Annually</button>
             <button className="mini-btn" aria-label="Open details">
-              <ExternalLink size={12} strokeWidth={2.2} />
+              <ExternalLink size={14} strokeWidth={2.2} />
             </button>
           </div>
         </div>
@@ -75,7 +74,7 @@ export function TopCards() {
             </div>
           </div>
           <button className="mini-btn" aria-label="Open details">
-            <ExternalLink size={12} strokeWidth={2.2} />
+            <ExternalLink size={14} strokeWidth={2.2} />
           </button>
         </div>
 
@@ -86,10 +85,10 @@ export function TopCards() {
 
         <div className="cta-row">
           <button className="send">
-            Send <ArrowUp size={12} strokeWidth={2.5} />
+            Send <ArrowUp size={14} strokeWidth={2.5} />
           </button>
           <button>
-            Receive <ArrowDown size={12} strokeWidth={2.5} />
+            Receive <ArrowDown size={14} strokeWidth={2.5} />
           </button>
         </div>
       </article>

@@ -38,7 +38,7 @@ export function BottomGrid() {
         <div className="card-head">
           <div className="card-title with-icon">
             <span className="title-icon">
-              <CreditCard size={15} strokeWidth={2.2} />
+              <HandCoins size={17} strokeWidth={2.2} />
             </span>
             <div>
               <h3>Payment History</h3>
@@ -46,7 +46,7 @@ export function BottomGrid() {
             </div>
           </div>
           <button className="mini-btn" aria-label="Open details">
-            <ExternalLink size={12} strokeWidth={2.2} />
+            <ExternalLink size={14} strokeWidth={2.2} />
           </button>
         </div>
 
@@ -67,7 +67,7 @@ export function BottomGrid() {
                   <td>
                     <span className="payment-name">
                       <span className={payment.iconClassName}>
-                        <payment.icon size={13} />
+                        <payment.icon size={15} />
                       </span>
                       {payment.name}
                     </span>
@@ -91,7 +91,7 @@ export function BottomGrid() {
           <div className="card-head">
             <div className="card-title with-icon">
               <span className="title-icon">
-                <HandCoins size={15} strokeWidth={2.2} />
+                <CreditCard size={17} strokeWidth={2.2} />
               </span>
               <div>
                 <h3>Amount of credit</h3>
@@ -99,12 +99,12 @@ export function BottomGrid() {
               </div>
             </div>
             <button className="mini-btn" aria-label="Open details">
-              <ExternalLink size={12} strokeWidth={2.2} />
+              <ExternalLink size={14} strokeWidth={2.2} />
             </button>
           </div>
           <div className="amount-line">
             <strong>$8,945.89</strong>
-            <span>+12.8%</span>
+            <span className="percentage-badge">+12.8%</span>
           </div>
         </article>
 
@@ -115,7 +115,7 @@ export function BottomGrid() {
               <p>Recent payments</p>
             </div>
             <button className="mini-btn" aria-label="Open details">
-              <ExternalLink size={12} strokeWidth={2.2} />
+              <ExternalLink size={14} strokeWidth={2.2} />
             </button>
           </div>
 

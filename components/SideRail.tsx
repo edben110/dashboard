@@ -1,12 +1,13 @@
 import {
-  BadgeDollarSign,
-  ChartColumn,
-  CircleHelp,
+  ChartNoAxesCombined,
+  Compass,
   CreditCard,
+  LayoutGrid,
   LogOut,
-  Receipt,
+  Mail,
   Settings,
   Wallet,
+  WalletCards,
 } from "lucide-react";
 
 export function SideRail() {
@@ -14,22 +15,28 @@ export function SideRail() {
     <aside className="left-rail card-base">
       <div className="rail-group">
         <button className="rail-btn active" aria-label="Dashboard">
-          <ChartColumn size={16} strokeWidth={2.2} />
+          <LayoutGrid size={19} strokeWidth={2.2} />
         </button>
         <button className="rail-btn" aria-label="Analytics">
-          <BadgeDollarSign size={16} strokeWidth={2.2} />
-        </button>
-        <button className="rail-btn" aria-label="Cards">
-          <CreditCard size={16} strokeWidth={2.2} />
+          <ChartNoAxesCombined size={19} strokeWidth={2.2} />
         </button>
         <button className="rail-btn" aria-label="Wallet">
-          <Wallet size={16} strokeWidth={2.2} />
+          <Wallet size={19} strokeWidth={2.2} />
         </button>
-        <button className="rail-btn" aria-label="Invoices">
-          <Receipt size={16} strokeWidth={2.2} />
+        <button className="rail-btn" aria-label="Cards">
+          <CreditCard size={19} strokeWidth={2.2} />
         </button>
-        <button className="rail-btn" aria-label="Support">
-          <CircleHelp size={16} strokeWidth={2.2} />
+      </div>
+
+      <div className="rail-group">
+        <button className="rail-btn" aria-label="Payments">
+          <WalletCards size={19} strokeWidth={2.2} />
+        </button>
+        <button className="rail-btn" aria-label="Messages">
+          <Mail size={19} strokeWidth={2.2} />
+        </button>
+        <button className="rail-btn" aria-label="Discover">
+          <Compass size={19} strokeWidth={2.2} />
         </button>
       </div>
 
@@ -37,10 +44,10 @@ export function SideRail() {
 
       <div className="rail-group">
         <button className="rail-btn" aria-label="Settings">
-          <Settings size={16} strokeWidth={2.2} />
+          <Settings size={19} strokeWidth={2.2} />
         </button>
         <button className="rail-btn" aria-label="Log out">
-          <LogOut size={16} strokeWidth={2.2} />
+          <LogOut size={19} strokeWidth={2.2} />
         </button>
       </div>
     </aside>
