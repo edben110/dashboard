@@ -36,10 +36,7 @@ export function BottomGrid() {
     <section className="grid-bottom">
       <article className="card-base history-card">
         <div className="card-head">
-          <div className="card-title with-icon">
-            <span className="title-icon">
-              <HandCoins size={17} strokeWidth={2.2} />
-            </span>
+          <div className="card-title">
             <div>
               <h3>Payment History</h3>
               <p>Recent payments history</p>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --page-bg: #d8d8da;
+  --page-bg: #f2f2f2;
   --card: #f8f8f8;
   --stroke: #e8ebec;
   --text: #202224;
@@ -23,7 +23,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at 18% 12%, #e7e8e8 0%, var(--page-bg) 38%, #ceced1 100%);
+  background: #f2f2f2;
   color: var(--text);
   font-family: var(--font-geist-sans), "Segoe UI", sans-serif;
 }
@@ -44,11 +44,12 @@ button:hover {
 
 .page-bg {
   min-height: 100vh;
-  padding: 28px;
+  padding: clamp(12px, 2.2vw, 28px);
 }
 
 .dashboard-shell {
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1680px;
   margin: 0 auto;
 }
 
@@ -178,26 +179,39 @@ button:hover {
 
 .content-layout {
   display: grid;
-  grid-template-columns: 84px minmax(0, 1fr);
+  grid-template-columns: minmax(72px, 92px) minmax(0, 1fr);
   gap: 20px;
 }
 
 .left-rail {
-  padding: 12px 10px;
+  padding: 8px 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.rail-cluster {
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: color-mix(in oklab, var(--card) 92%, white 8%);
+  box-shadow: 0 12px 24px rgba(21, 26, 29, 0.05);
 }
 
 .rail-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .rail-spacer {
-  flex: 1;
+  flex: 1 1 auto;
+  min-height: 160px;
 }
 
 .rail-btn {
@@ -236,6 +250,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
 }
 
 .hero-row {
@@ -288,13 +303,13 @@ button:hover {
 
 .grid-top {
   display: grid;
-  grid-template-columns: 1.05fr 1.6fr 1.05fr;
+  grid-template-columns: minmax(280px, 1.05fr) minmax(420px, 1.6fr) minmax(280px, 1.05fr);
   gap: 14px;
 }
 
 .grid-bottom {
   display: grid;
-  grid-template-columns: 2.4fr 1fr;
+  grid-template-columns: minmax(620px, 2.4fr) minmax(280px, 1fr);
   gap: 14px;
 }
 
@@ -718,11 +733,16 @@ tbody tr td:last-child {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0;
   }
 
   .rail-group {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .rail-cluster {
+    padding: 6px 8px;
   }
 
   .rail-spacer {
