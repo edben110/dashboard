@@ -388,10 +388,44 @@ button:hover {
   margin-bottom: 12px;
 }
 
-.cc-brand {
-  margin: 0;
-  font-size: 1.15rem;
-  font-weight: 700;
+.cc-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.cc-brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.cc-brand-mark svg {
+  width: 88px;
+  height: 32px;
+  color: #f4fff8;
+}
+
+.cc-brand-word {
+  font-size: 1.03rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  color: #f4fff8;
+}
+
+.cc-contactless {
+  display: grid;
+  place-items: center;
+  color: rgba(237, 250, 242, 0.8);
+}
+
+.cc-contactless svg {
+  transform: rotate(-90deg);
+  width: 18px;
+  height: 18px;
 }
 
 .cc-type {

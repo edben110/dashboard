@@ -4,7 +4,9 @@ import {
   ArrowUp,
   ExternalLink,
   SquareChartGantt,
+  Wifi,
 } from "lucide-react";
+import { FaCcVisa } from "react-icons/fa";
 
 export function TopCards() {
   return (
@@ -23,7 +25,14 @@ export function TopCards() {
         </div>
 
         <div className="credit-card">
-          <p className="cc-brand">VISA</p>
+          <div className="cc-top-row">
+            <div className="cc-brand-mark" aria-label="Visa brand">
+              <FaCcVisa />
+            </div>
+            <span className="cc-contactless" aria-label="Contactless payment">
+              <Wifi size={16} strokeWidth={2.2} />
+            </span>
+          </div>
           <p className="cc-type">Credit Card</p>
           <p className="cc-balance">$ 78,989.09</p>
           <div className="cc-foot">
